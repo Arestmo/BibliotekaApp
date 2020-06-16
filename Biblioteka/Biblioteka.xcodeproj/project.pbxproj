@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E554876F248D524A00DD7714 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554876E248D524A00DD7714 /* FiltersViewController.swift */; };
 		E56601D52486C5B600F89C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56601D42486C5B600F89C0F /* AppDelegate.swift */; };
 		E56601D72486C5B600F89C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56601D62486C5B600F89C0F /* ViewController.swift */; };
 		E56601DA2486C5B600F89C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56601D82486C5B600F89C0F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		E56601E22486C5B600F89C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56601E02486C5B600F89C0F /* LaunchScreen.storyboard */; };
 		E56601ED2486C5B600F89C0F /* BibliotekaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56601EC2486C5B600F89C0F /* BibliotekaTests.swift */; };
 		E56601F82486C5B600F89C0F /* BibliotekaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56601F72486C5B600F89C0F /* BibliotekaUITests.swift */; };
+		E5A8B2F8248C744700E00C72 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8B2F7248C744700E00C72 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E50F1D43248E8DE900BBB302 /* logo_png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_png.png; sourceTree = "<group>"; };
+		E50F1D44248E8DE900BBB302 /* lupa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lupa.png; sourceTree = "<group>"; };
+		E554876E248D524A00DD7714 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		E56601D12486C5B600F89C0F /* Biblioteka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biblioteka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56601D42486C5B600F89C0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56601D62486C5B600F89C0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,12 @@
 		E56601F32486C5B600F89C0F /* BibliotekaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibliotekaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56601F72486C5B600F89C0F /* BibliotekaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibliotekaUITests.swift; sourceTree = "<group>"; };
 		E56601F92486C5B600F89C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5A8B2F7248C744700E00C72 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E5B102EE248D08640058C89B /* book1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book1.png; sourceTree = "<group>"; };
+		E5ECCF0F248A87FC007479C8 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		E5ECCF10248A87FC007479C8 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
+		E5ECCF11248A87FC007479C8 /* lewo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lewo.png; sourceTree = "<group>"; };
+		E5ECCF13248A87FC007479C8 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +110,16 @@
 		E56601D32486C5B600F89C0F /* Biblioteka */ = {
 			isa = PBXGroup;
 			children = (
+				E5ECCF14248A87FC007479C8 /* images */,
 				E56601D42486C5B600F89C0F /* AppDelegate.swift */,
 				E56601D62486C5B600F89C0F /* ViewController.swift */,
+				E554876E248D524A00DD7714 /* FiltersViewController.swift */,
 				E56601D82486C5B600F89C0F /* Main.storyboard */,
 				E56601DE2486C5B600F89C0F /* Assets.xcassets */,
 				E56601E02486C5B600F89C0F /* LaunchScreen.storyboard */,
 				E56601E32486C5B600F89C0F /* Info.plist */,
 				E56601DB2486C5B600F89C0F /* Biblioteka.xcdatamodeld */,
+				E5A8B2F7248C744700E00C72 /* CollectionViewCell.swift */,
 			);
 			path = Biblioteka;
 			sourceTree = "<group>";
@@ -127,6 +141,21 @@
 			);
 			path = BibliotekaUITests;
 			sourceTree = "<group>";
+		};
+		E5ECCF14248A87FC007479C8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E5ECCF0F248A87FC007479C8 /* cancel.png */,
+				E5ECCF10248A87FC007479C8 /* filter.png */,
+				E50F1D43248E8DE900BBB302 /* logo_png.png */,
+				E50F1D44248E8DE900BBB302 /* lupa.png */,
+				E5B102EE248D08640058C89B /* book1.png */,
+				E5ECCF11248A87FC007479C8 /* lewo.png */,
+				E5ECCF13248A87FC007479C8 /* ok.png */,
+			);
+			name = images;
+			path = /Users/pawel/Desktop/BibliotekaApp/Biblioteka/Biblioteka/images;
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -261,7 +290,9 @@
 			files = (
 				E56601D72486C5B600F89C0F /* ViewController.swift in Sources */,
 				E56601D52486C5B600F89C0F /* AppDelegate.swift in Sources */,
+				E5A8B2F8248C744700E00C72 /* CollectionViewCell.swift in Sources */,
 				E56601DD2486C5B600F89C0F /* Biblioteka.xcdatamodeld in Sources */,
+				E554876F248D524A00DD7714 /* FiltersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
