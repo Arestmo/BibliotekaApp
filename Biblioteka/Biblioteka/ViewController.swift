@@ -14,13 +14,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let books = ["book1", "book2", "book3", "book4"]
-    let bookImages: [UIImage] = [
-        UIImage(named: "book1")!,
-        UIImage(named: "book1")!,
-        UIImage(named: "book1")!,
-        UIImage(named: "book1")!,
-    ]
+    var booksArr = [SingleBook]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +25,57 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         imageView.image = UIImage(named: "lupa")
         search.rightView = imageView;
         search.rightViewMode = .always
+        
+        downloadJSON {
+            print("Successfull load data from JSON")
+            self.collectionView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
+        return booksArr.count
+    }
+    
+    func downloadJSON(completed: @escaping () -> ()) {
+        let url = URL(string: "http://localhost:4000/books")
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error == nil {
+                do {
+                    self.booksArr = try JSONDecoder().decode([SingleBook].self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                } catch {
+                    print("JSON ERROR")
+                }
+            }
+        }.resume()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.bookName.text = books[indexPath.item]
-        cell.bookImage.image = bookImages[indexPath.item]
+        cell.bookName.text = booksArr[indexPath.item].title
+        let url = URL(string: booksArr[indexPath.item].url)
+        cell.bookImage.load(url: url!)
         
         return cell
     }
 
 }
 
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}

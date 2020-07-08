@@ -17,6 +17,7 @@
 		E56601ED2486C5B600F89C0F /* BibliotekaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56601EC2486C5B600F89C0F /* BibliotekaTests.swift */; };
 		E56601F82486C5B600F89C0F /* BibliotekaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56601F72486C5B600F89C0F /* BibliotekaUITests.swift */; };
 		E5A8B2F8248C744700E00C72 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8B2F7248C744700E00C72 /* CollectionViewCell.swift */; };
+		F9CC830124B63D5A00F3F04F /* SingleBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC830024B63D5A00F3F04F /* SingleBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E5ECCF10248A87FC007479C8 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
 		E5ECCF11248A87FC007479C8 /* lewo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lewo.png; sourceTree = "<group>"; };
 		E5ECCF13248A87FC007479C8 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		F9CC830024B63D5A00F3F04F /* SingleBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				E554876E248D524A00DD7714 /* FiltersViewController.swift */,
 				E56601D82486C5B600F89C0F /* Main.storyboard */,
 				E56601DE2486C5B600F89C0F /* Assets.xcassets */,
+				F9CC830024B63D5A00F3F04F /* SingleBook.swift */,
 				E56601E02486C5B600F89C0F /* LaunchScreen.storyboard */,
 				E56601E32486C5B600F89C0F /* Info.plist */,
 				E56601DB2486C5B600F89C0F /* Biblioteka.xcdatamodeld */,
@@ -290,6 +293,7 @@
 			files = (
 				E56601D72486C5B600F89C0F /* ViewController.swift in Sources */,
 				E56601D52486C5B600F89C0F /* AppDelegate.swift in Sources */,
+				F9CC830124B63D5A00F3F04F /* SingleBook.swift in Sources */,
 				E5A8B2F8248C744700E00C72 /* CollectionViewCell.swift in Sources */,
 				E56601DD2486C5B600F89C0F /* Biblioteka.xcdatamodeld in Sources */,
 				E554876F248D524A00DD7714 /* FiltersViewController.swift in Sources */,
